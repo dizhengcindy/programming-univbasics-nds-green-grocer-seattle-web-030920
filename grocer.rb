@@ -98,7 +98,7 @@ def checkout(cart, coupons)
   newcart = apply_clearance(newcart)
   index = 0 
   while index < newcart.length do 
-    total += newcart[:price] * newcart[:count]
+    total += newcart[index][:price] * newcart[index][:count]
     index += 1 
   end
   

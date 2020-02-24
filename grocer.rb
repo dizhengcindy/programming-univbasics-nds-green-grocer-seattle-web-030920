@@ -44,18 +44,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  newCart = []
-  index
-  while index < 0 do 
-    name = cart[index][:item]
-    item = find_item_by_name_in_collection(name,coupons)
-     if item && coupons[:num] <= cart[index][:count]
-        item_coupon = coupons[]
-       
-     else
-      newCart << cart[index]
-     end
-    index += 1 
+  
   
 end
 

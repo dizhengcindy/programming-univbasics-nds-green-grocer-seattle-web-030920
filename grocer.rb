@@ -51,8 +51,15 @@ def apply_coupons(cart, coupons)
   item_has_coupon = find_item_by_name_in_collection(name, cart)
   coupon = coupons[index]
   if item_has_coupon && item_has_coupon[:count] >= coupon[:num]
-    
-    
+    item_has_coupon[:count] -= coupon[:num]
+    #coupon hash
+    item_coupon_hash = {
+      :item = "#{item_has_coupon[:item]} W/COUPON",
+      :price = item_has_coupon[:price],
+      :clearance = item_has_coupon[:clearance],
+      :count = coupon[:num]
+    }
+    cart << item_coupon_hash
   end
   index +=1 
   end 

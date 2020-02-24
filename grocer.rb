@@ -45,7 +45,6 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-  newCart = []
   index = 0
   while index < coupons.length do
   name = coupons[index][:item]
